@@ -9,5 +9,4 @@ public interface RoleSearchService {
 
 	public List<Map<String, Object>> getMapListByState(Integer status) throws ServiceException;
 	
-	
 }

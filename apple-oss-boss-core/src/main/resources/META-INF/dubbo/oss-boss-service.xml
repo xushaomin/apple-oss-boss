@@ -9,5 +9,5 @@
 	<dubbo:reference id="userSearchService" interface="com.appleframework.oss.boss.service.UserSearchService" />
 	<dubbo:reference id="roleSearchService" interface="com.appleframework.oss.boss.service.RoleSearchService" />
 	<dubbo:reference id="departmentSearchService" interface="com.appleframework.oss.boss.service.DepartmentSearchService" />
-		
+	
 </beans>
