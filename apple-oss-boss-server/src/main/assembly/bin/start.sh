@@ -15,7 +15,7 @@ SERVER_NAME=`sed '/application.name/!d;s/.*=//' conf/system.properties | tr -d '
 SERVER_PROTOCOL=`sed '/protocol.name/!d;s/.*=//' conf/system.properties | tr -d '\r'`
 SERVER_PORT=`sed '/protocol.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
 LOGS_FILE=`sed '/log4j.appender.logToFile.File/!d;s/.*=//' conf/log4j.properties | tr -d '\r'`
-JMX_PORT=`sed '/jmx.registry.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
+JMX_PORT=`sed '/jmx.port/!d;s/.*=//' conf/system.properties | tr -d '\r'`
 
 if [ -z "$SERVER_NAME" ]; then
     SERVER_NAME=`hostname`
@@ -96,4 +96,4 @@ echo "OK!"
 PIDS=`ps -f | grep java | grep "$DEPLOY_DIR" | awk '{print $2}'`
 echo "PID: $PIDS"
 echo "STDOUT: $STDOUT_FILE"
-tail -n1000 $STDOUT_FILE
+tail -f $STDOUT_FILE
