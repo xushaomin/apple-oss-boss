@@ -15,13 +15,13 @@
 			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	
 	<bean id="propertyConfigurer"
-		class="com.appleframework.config.diamond.spring.ExtendedPropertyPlaceholderConfigurer">
+		class="com.appleframework.config.ExtendedPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:system.properties</value>
 			</list>
 		</property>
-		<property name="loadDiamond" value="true" />
+		<property name="loadRemote" value="true" />
 	</bean>
 	
 	 <!-- 启用注解识别功能 -->
