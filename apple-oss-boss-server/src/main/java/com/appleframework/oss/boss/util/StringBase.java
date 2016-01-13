@@ -18,9 +18,6 @@ public class StringBase {
 	/**
 	 * 判断变量是否为NULL或空
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-03
-	 * @company: GLSX.
 	 * @return
 	 */
 	public static boolean CheckStr(String str) {
@@ -35,9 +32,6 @@ public class StringBase {
 	/**
 	 * 判断数字是否为NULL及是否大于0
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-30
-	 * @company: GLSX.
 	 * @param ints
 	 *            需要检测比较的数字
 	 * @return
@@ -54,9 +48,6 @@ public class StringBase {
 	/**
 	 * 判断数字是否为NULL及是否大于0
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-30
-	 * @company: GLSX.
 	 * @param ints
 	 *            需要检测比较的数字
 	 * @return
@@ -73,9 +64,6 @@ public class StringBase {
 	/**
 	 * 判断变量是否为NULL及
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-03
-	 * @company: GLSX.
 	 * @param str
 	 *            需要检测比较的字符串
 	 * @param value
@@ -94,9 +82,6 @@ public class StringBase {
 	/**
 	 * 判断变量是否为NULL或空
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-03
-	 * @company: GLSX.
 	 * @param array
 	 *            用作比较的值
 	 * @return
@@ -118,9 +103,6 @@ public class StringBase {
 	/**
 	 * 根据查询标识返回一组开始，结束的时间日期，格式为：xxxx-xx-xx
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-07
-	 * @company: GLSX.
 	 * @param selValue
 	 *            查询标识
 	 * @return
@@ -167,9 +149,6 @@ public class StringBase {
 	/**
 	 * 根据查询标识组合查询时间段
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-07
-	 * @company: GLSX.
 	 * @param field
 	 *            组合内容
 	 * @param selValue
@@ -269,9 +248,6 @@ public class StringBase {
 	/**
 	 * KB单位转为MB或G
 	 * 
-	 * @author 产研部-许智皓
-	 * @date 2013-01-07
-	 * @company: GLSX.
 	 * @param mapcount
 	 *            地图数据大小 单位/KB
 	 * @return 一个字符串的数据大小单位
@@ -347,7 +323,6 @@ public class StringBase {
 	 * 
 	 * @param str
 	 * @return
-	 * @吴金玉
 	 */
 	public static List<String> StringToList(String str) {
 		String[] strArray = str.split(";");
