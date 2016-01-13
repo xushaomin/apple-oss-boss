@@ -12,6 +12,7 @@ import java.util.List;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
+@SuppressWarnings("restriction")
 public class StringBase {
 
 	/**
