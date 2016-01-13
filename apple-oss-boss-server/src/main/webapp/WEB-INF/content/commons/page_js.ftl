@@ -12,4 +12,4 @@
 <script type="text/javascript" src="/js/prompt.js"></script>
 <script type="text/javascript" src="/js/artDialog/artDialog.source.js?skin=apple"></script>
 <script type="text/javascript" src="/js/artDialog/plugins/iframeTools.source.js"></script>
-<script type="text/javascript" src="/js/pop.js"></script>
+<script type="text/javascript" src="/js/pop_all.js"></script>
