@@ -4,9 +4,9 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>apple-oss-boss</artifactId>
 		<groupId>com.appleframework.oss</groupId>
-		<version>1.0.0</version>
+		<artifactId>apple-oss-boss</artifactId>
+		<version>0.0.2.RELEASE</version>
 	</parent>
 	<artifactId>apple-oss-boss-core</artifactId>
 	<name>apple-oss-boss-core</name>
