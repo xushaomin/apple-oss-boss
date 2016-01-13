@@ -14,7 +14,7 @@ import com.appleframework.oss.boss.service.DepartmentService;
 import com.appleframework.web.freemarker.directive.BaseDirective;
 
 import freemarker.core.Environment;
-import freemarker.template.SimpleScalar;
+import freemarker.ext.beans.StringModel;
 import freemarker.template.TemplateDirectiveBody;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateModel;
@@ -28,9 +28,9 @@ public class DepartDirective extends BaseDirective {
 	private DepartmentService departmentService;
 
 	@SuppressWarnings({ "rawtypes" })
-	public void execute(Environment env, Map params, TemplateModel[] loopVars, TemplateDirectiveBody body) throws TemplateException, IOException {		
-		SimpleScalar path = (SimpleScalar)params.get("path");
-		//SimpleNumber idNumber = (SimpleNumber)params.get("id");
+	public void execute(Environment env, Map params, TemplateModel[] loopVars, TemplateDirectiveBody body) 
+			throws TemplateException, IOException {		
+		StringModel path = (StringModel)params.get("path");
 		List<Department> departmentList = departmentService.getDepartmentListByPath(path.toString());
 		String departments = "";
 		for (int i = 0; i < departmentList.size(); i++) {
