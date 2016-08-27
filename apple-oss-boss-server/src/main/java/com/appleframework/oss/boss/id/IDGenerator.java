@@ -11,12 +11,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.MappingException;
-import org.hibernate.dialect.Dialect;
 import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.id.Configurable;
 import org.hibernate.id.IdentifierGenerationException;
 import org.hibernate.id.IdentifierGenerator;
 import org.hibernate.id.PersistentIdentifierGenerator;
+import org.hibernate.service.ServiceRegistry;
 import org.hibernate.type.Type;
 
 
@@ -34,14 +34,16 @@ public class IDGenerator implements IdentifierGenerator, Configurable {
 	private String column;
 	private String table;
 	
+	@Override
 	public Serializable generate(SessionImplementor session, Object object) throws HibernateException {
 		if (selectsql != null) {
 			this.getNext(session.connection(), object);
 		}
 		return createId(next++, returnClass);
 	}
-
-	public void configure(Type type, Properties params, Dialect d) throws MappingException {
+	
+	@Override
+	public void configure(Type type, Properties params, ServiceRegistry arg2) throws MappingException {
 		table = params.getProperty("table");
 		if (table == null)
 			table = params.getProperty(PersistentIdentifierGenerator.TABLE);
@@ -51,7 +53,9 @@ public class IDGenerator implements IdentifierGenerator, Configurable {
 		String schema = params.getProperty(PersistentIdentifierGenerator.SCHEMA);
 		selectsql = "select max(" + column + ") from " + (schema == null ? table : schema + "." + table);
 		returnClass = type.getReturnedClass();
+		
 	}
+	
 	
 	private void getNext(Connection conn, Object object) throws HibernateException {
 		try {
@@ -109,4 +113,6 @@ public class IDGenerator implements IdentifierGenerator, Configurable {
 			throw new IdentifierGenerationException("this id generator generates long, integer, short");
 		}
 	}
+
+	
 }
