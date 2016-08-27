@@ -4,14 +4,14 @@
 
 	<groupId>com.appleframework.oss</groupId>
 	<artifactId>apple-oss-boss</artifactId>
-	<version>0.0.2.RELEASE</version>
+	<version>0.0.3.RELEASE</version>
 	<packaging>pom</packaging>
 
 	<name>apple-oss-boss</name>
 	<url>http://mvnrepo.appleframework.com</url>
 
 	<properties>
-		<project.version>0.0.2.RELEASE</project.version>
+		<project.version>0.0.3.RELEASE</project.version>
 		<boss.version>${project.version}</boss.version>
 		<apple.version>0.1.4.RELEASE</apple.version>
 	</properties>

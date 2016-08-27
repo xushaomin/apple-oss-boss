@@ -11,12 +11,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.MappingException;
-import org.hibernate.dialect.Dialect;
 import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.id.Configurable;
 import org.hibernate.id.IdentifierGenerationException;
 import org.hibernate.id.IdentifierGenerator;
 import org.hibernate.id.PersistentIdentifierGenerator;
+import org.hibernate.service.ServiceRegistry;
 import org.hibernate.type.Type;
 
 
@@ -41,7 +41,7 @@ public class IDGenerator implements IdentifierGenerator, Configurable {
 		return createId(next++, returnClass);
 	}
 
-	public void configure(Type type, Properties params, Dialect d) throws MappingException {
+	public void configure(Type type, Properties params, ServiceRegistry serviceRegistry) throws MappingException {
 		table = params.getProperty("table");
 		if (table == null)
 			table = params.getProperty(PersistentIdentifierGenerator.TABLE);
