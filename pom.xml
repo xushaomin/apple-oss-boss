@@ -35,14 +35,14 @@
 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
-			<name>Apple Releases Repository</name>
-			<url>http://mvnrepo.appleframework.com/nexus/content/repositories/releases</url>
+			<name>Nexus Releases Repository</name>
+			<url>http://nexus.appleframework.com/nexus/content/repositories/releases</url>
 		</repository>
 
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
-			<name>Apple Snapshots Repository</name>
-			<url>http://mvnrepo.appleframework.com/nexus/content/repositories/snapshots</url>
+			<name>Nexus Snapshots Repository</name>
+			<url>http://nexus.appleframework.com/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
