@@ -36,13 +36,13 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Releases Repository</name>
-			<url>http://nexus.appleframework.com/nexus/content/repositories/releases</url>
+			<url>http://nexus.appleframework.com:8081/nexus/content/repositories/releases</url>
 		</repository>
 
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus Snapshots Repository</name>
-			<url>http://nexus.appleframework.com/nexus/content/repositories/snapshots</url>
+			<url>http://nexus.appleframework.com:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
